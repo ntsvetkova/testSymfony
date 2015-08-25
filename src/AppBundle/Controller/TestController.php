@@ -21,8 +21,9 @@ class TestController extends Controller
     public function testAction() {
         $number = rand(1,31);
 
-        return new Response(
-            '<html><body>Number: ' . $number . '</body></html>'
-        );
+        return $this->render('test/test.html.twig', array('number' => $number));
+//        return new Response(
+//            '<html><body>Number: ' . $number . '</body></html>'
+//        );
     }
 }
